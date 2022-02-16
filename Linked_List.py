@@ -48,3 +48,5 @@ if __name__ == '__main__':
     ll.insert_values([1, 2, 3, 4, 6, 7])
     ll.insert_at_end(12)
     ll.print()
+
+    #Check for the errors
