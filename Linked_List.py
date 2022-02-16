@@ -23,6 +23,11 @@ class ll:
 
         itr.next = Node(data, None)  # As the loop ends this creates a Node after the last node
 
+    def insert_values(self, data_list):
+        self.head = None
+        for data in data_list:
+            self.insert_at_end(data)
+
     def print(self):
         if self.head is None:
             print("Linked list is empty")
@@ -32,13 +37,14 @@ class ll:
         llstr = ''
         while itr:
             llstr += '-->' + str(itr.data)  # Printing by saving the values in a string
-            # print(itr.data)
-            itr = itr.next  # used to move the pointer
-        print(llstr)
+            print(itr.data)
+            #  itr = itr.next  # used to move the pointer
+        # print(llstr)
 
 
 if __name__ == '__main__':
     ll = ll()
     ll.insert_at_top(5)
+    ll.insert_values([1, 2, 3, 4, 6, 7])
     ll.insert_at_end(12)
     ll.print()
